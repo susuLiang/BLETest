@@ -58,3 +58,31 @@ extension ViewController: CBCentralManagerDelegate {
 }
 
 
+extension ViewController: CBPeripheralDelegate {
+    
+    func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
+        guard let services = peripheral.services, error == nil else { return }
+        for service in services {
+            if service.uuid == BLEPeripheral.serviceUUID {
+                peripheral.discoverCharacteristics([BLEPeripheral.batteryUUID], for: service)
+                return
+            }
+        }
+    }
+    
+    func peripheral(_ peripheral: CBPeripheral, didDiscoverCharacteristicsFor service: CBService, error: Error?) {
+        guard let characteristics = service.characteristics else { return }
+        for characteristic in characteristics {
+            if characteristic.uuid == BLEPeripheral.batteryUUID {
+                self.peripheral.readValue(for: characteristic)
+            }
+        }
+    }
+    
+    func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
+        guard let data = characteristic.value else { return }
+        if characteristic.uuid == BLEPeripheral.batteryUUID, let batteryLevel = data.first {
+            print(batteryLevel)
+        }
+    }
+}
