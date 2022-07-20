@@ -13,6 +13,7 @@
 		D26D0B4E288653D60061E91C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D26D0B4C288653D60061E91C /* Main.storyboard */; };
 		D26D0B50288653D70061E91C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D26D0B4F288653D70061E91C /* Assets.xcassets */; };
 		D26D0B53288653D70061E91C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D26D0B51288653D70061E91C /* LaunchScreen.storyboard */; };
+		D26D0B61288661F40061E91C /* BLEPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26D0B60288661F40061E91C /* BLEPeripheral.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		D26D0B4F288653D70061E91C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D26D0B52288653D70061E91C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D26D0B54288653D70061E91C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D26D0B60288661F40061E91C /* BLEPeripheral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEPeripheral.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				D26D0B46288653D60061E91C /* AppDelegate.swift */,
 				D26D0B48288653D60061E91C /* SceneDelegate.swift */,
 				D26D0B4A288653D60061E91C /* ViewController.swift */,
+				D26D0B60288661F40061E91C /* BLEPeripheral.swift */,
 				D26D0B4C288653D60061E91C /* Main.storyboard */,
 				D26D0B4F288653D70061E91C /* Assets.xcassets */,
 				D26D0B51288653D70061E91C /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D26D0B4B288653D60061E91C /* ViewController.swift in Sources */,
+				D26D0B61288661F40061E91C /* BLEPeripheral.swift in Sources */,
 				D26D0B47288653D60061E91C /* AppDelegate.swift in Sources */,
 				D26D0B49288653D60061E91C /* SceneDelegate.swift in Sources */,
 			);
